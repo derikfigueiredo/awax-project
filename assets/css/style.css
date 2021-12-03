@@ -1,0 +1,288 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/************** BASE ***/
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.button {
+  background-color: #33FFE0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 0 10px #000;
+}
+
+.button:hover {
+  background-color: #33ffad;
+}
+
+
+
+/********* HEADER ***/
+#header {
+  background-color: #000;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-area {
+  background-color:#33FFE0;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+
+ul li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+ul li a {
+  border-bottom: 0.4rem solid #000;
+}
+ul li a:hover,
+ul li a.active {
+  border-bottom: 0.4rem solid #33FFE0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/******* BANNER **/
+.banner {
+  background-color: #000;
+  height: calc(100vh - 100px);
+  background-image: url("../../media/bg.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.slides {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.banner .slide, 
+a {
+  color: #FFF;
+}
+
+.banner .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner .slides h1 {
+  font-size: 4rem;
+  margin-bottom: 1.4rem;
+}
+
+.banner .slide h1 span {
+  color: #33FFE0;
+}
+
+.banner .slide h2 {
+  margin-bottom: 1.5rem;
+}
+
+.sliders-pointers {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+}
+
+.sliders-pointers .pointer {
+  width: 16px;
+  height: 16px;
+  border: solid #33FFE0 2px;
+  border-radius: 8px;
+  margin: 0 4px 0 4px;
+}
+
+.sliders-pointers .pointer.active,
+.sliders-pointers .pointer:hover {
+  background-color: #33FFE0;
+}
+
+
+/******** SECTIONS **/
+section.default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.125rem 0;
+}
+
+section.default .section-title, .section-subtitle {
+  text-transform: uppercase;
+}
+
+section.default .section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section.default .section-subtitle {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: #808080;
+  font-weight: 500;
+}
+
+
+
+
+/******** SECTION ABOUT US **/
+section.section-about-us .container {
+  display: flex;
+  margin-top: 30px;
+  width: 1200px;
+  justify-content: center;
+}
+
+section.section-about-us .section-about-us-text {
+  width: 100%;
+  max-width: 500px;
+  margin-right: 20px;
+}
+
+section.section-about-us .section-about-us-image {
+  max-width: 480px;
+  width: 100%;
+}
+
+section.section-about-us .section-about-us-image img {
+  width: 100%;
+  max-width: 500px;
+}
+
+section .section-about-us-text p {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+/************** SERVICES SECTION ************/
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+
+ .container {
+  margin: 0 2.25rem;
+  }
+ .menu-area nav {
+   display: none;
+ }
+
+ .menu-area nav.open {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+ .menu-area nav.open ul li {
+   height: 50px;
+   padding: 0 30px 1px 20px;
+}
+
+ ul {
+    height: fit-content;
+    display: block;
+    list-style: none;
+    background-color: #000;
+}
+
+ .menu-area .stripe {
+   width: 30px;
+   height: 2px;
+   margin: 5px 0;
+   background-color: #33FFE0;
+ }
+
+ .logo-area {
+  background-color:#33FFE0;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.banner .slides h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.banner .slides h2 {
+  font-size: 1.3rem;
+}
+
+.button {
+  font-size: 0.7rem;
+}
+
+
+@media (max-width: 300px) {
+
+  .logo-area {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .banner .slide h1 {
+    font-size: 1.8rem;
+  }
+
+}
+  
+}
+
+
+
